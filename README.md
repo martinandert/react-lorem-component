@@ -53,7 +53,7 @@ words               | ['ad','dolor',...] | custom word dictionary
 
 The last six properties are send directly to the [lorem-ipsum][3] node module which is used internally to generate the lorem text.
 
-Other properties you pass (eg. `className`) are transfered to the wrapping tag.
+Other properties you pass (eg. `className`) are transferred to the wrapping tag.
 
 
 ## Example
