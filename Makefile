@@ -8,13 +8,16 @@ install link:
 lint:
 	@$(BIN)/jshint index.js
 
-release-patch: lint
+test: lint
+	@$(BIN)/mocha -t 5000 -b -R spec spec.js
+
+release-patch: test
 	@$(call release,patch)
 
-release-minor: lint
+release-minor: test
 	@$(call release,minor)
 
-release-major: lint
+release-major: test
 	@$(call release,major)
 
 publish:
