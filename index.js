@@ -9,13 +9,13 @@ var Lorem = React.createClass({
   displayName: "Lorem",
 
   getDefaultProps: function() {
-    return { count: 5, random: random, seed: 0 };
+    return { count: 5, seed: 0 };
   },
 
   getInitialState: function() {
     random.seed(this.props.seed);
 
-    var options     = merge(this.props, { units: "paragraphs", format: "plain" });
+    var options     = merge(this.props, { units: "paragraphs", format: "plain", random: random });
     var paragraphs  = loremIpsum(options).split(/\r?\n/).filter(function(p) { return p.length; });
 
     return { paragraphs: paragraphs };
