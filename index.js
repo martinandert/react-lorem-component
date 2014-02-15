@@ -12,21 +12,20 @@ var Lorem = React.createClass({
     return { count: 5, seed: 0 };
   },
 
-  getInitialState: function() {
-    random.seed(this.props.seed);
-
-    var options     = merge(this.props, { units: "paragraphs", format: "plain", random: random });
-    var paragraphs  = loremIpsum(options).split(/\r?\n/).filter(function(p) { return p.length; });
-
-    return { paragraphs: paragraphs };
-  },
-
   render: function() {
-    var content = this.state.paragraphs.map(function(paragraph, i) {
-      return React.DOM.p({ key: i }, paragraph);
+    var options = merge(this.props, { 
+      units: "paragraphs", 
+      format: "html", 
+      random: random 
     });
 
-    return this.transferPropsTo(React.DOM.div(null, content));
+    random.seed(this.props.seed);
+
+    var html = loremIpsum(options);
+
+    return this.transferPropsTo(
+      React.DOM.div({ dangerouslySetInnerHTML: { __html: html } })
+    );
   }
 });
 

@@ -4,10 +4,17 @@ var LoremIpsum  = require("./index");
 
 describe("react-lorem-component", function() {
   it("renders lorem ipsum text", function() {
-    var component = LoremIpsum({ count: 1, words: ["foo"] });
+    var component = LoremIpsum({ 
+      count: 2,
+      words: ["foo"],
+      sentenceLowerBound: 3,
+      sentenceUpperBound: 3,
+      paragraphLowerBound: 2,
+      paragraphUpperBound: 2 
+    });
 
     React.renderComponentToString(component, function(markup) {
-      assert(/foo/.test(markup));
+      assert(/<p>Foo foo foo. Foo foo foo.<\/p><p>Foo foo foo. Foo foo foo.<\/p>/.test(markup));
     });
   });
 });
