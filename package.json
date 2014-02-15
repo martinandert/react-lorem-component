@@ -1,7 +1,7 @@
 {
   "name": "react-lorem-component",
   "version": "0.5.0",
-  "description": "A component for React that renders paragraph tags full of lorem ipsum text",
+  "description": "A component for React that renders paragraph or list item tags full of lorem ipsum text",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -27,13 +27,19 @@
     "seedable-random": "~0.0.1",
     "lorem-ipsum": "~1.0.1"
   },
+  "peerDependencies": {
+    "react": "~0.8.0"
+  },
   "devDependencies": {
     "semver": "~2.2.1",
     "node-dev": "~2.1.6",
     "jshint": "~2.4.3",
-    "mocha": "~1.17.1"
-  },
-  "peerDependencies": {
+    "mocha": "~1.17.1",
+    "connect-browserify": "~1.0.0",
+    "express": "~3.4.8",
+    "node-jsx": "~0.2.1",
+    "reactify": "~0.7.0",
+    "envify": "~0.2.0",
     "react": "~0.8.0"
   }
 }

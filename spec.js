@@ -3,7 +3,7 @@ var React       = require('react');
 var LoremIpsum  = require('./index');
 
 describe('react-lorem-component', function() {
-  it('transfers properties', function() {
+  it('transfers props', function() {
     React.renderComponentToString(LoremIpsum({ className: "lorem-ipsum" }), function(markup) {
       assert(/^<div [^>]*?class="lorem-ipsum"/.test(markup));
     });

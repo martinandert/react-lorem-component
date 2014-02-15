@@ -30,7 +30,7 @@ var Lorem = React.createClass({
     if (this.props.mode === "list") {
       html = html.replace(/<p>(.*?)<\/p>/g, "<li>$1</li>");
 
-      if (this.props.ordered === true) {
+      if (this.props.ordered) {
         wrapper = React.DOM.ol;
       } else {
         wrapper = React.DOM.ul;

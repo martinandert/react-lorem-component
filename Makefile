@@ -11,6 +11,9 @@ lint:
 test: lint
 	@$(BIN)/mocha -t 5000 -b -R spec spec.js
 
+example::
+	@$(BIN)/node-dev --no-deps example/server.js
+
 release-patch: test
 	@$(call release,patch)
 
