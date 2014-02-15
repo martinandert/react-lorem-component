@@ -24,12 +24,13 @@
   },
   "homepage": "https://github.com/natekross/react-lorem-component",
   "dependencies": {
-    "seedable-random": "0.0.1",
+    "seedable-random": "~0.0.1",
     "lorem-ipsum": "~1.0.1"
   },
   "devDependencies": {
     "semver": "~2.2.1",
-    "node-dev": "~2.1.6"
+    "node-dev": "~2.1.6",
+    "jshint": "~2.4.3"
   },
   "peerDependencies": {
     "react": "~0.8.0"
