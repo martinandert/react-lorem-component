@@ -39,19 +39,21 @@ The above `<Lorem />` tag by default renders five paragraphs of lorem wrapped in
 
 You can pass the following props to the `Lorem` component to fine-tune the output.
 
-Prop                | Default               | Description      
-------------------- |:---------------------:| ------------
-mode                | "paragraphs"          | if set to `"list"`, instead of `<p>` tags wrapped in a `<div>` it renders `<li>`s wrapped in an `<ul>`
-ordered             | false                 | if `mode` is set to `"list"` and this prop has a truthy value, the list items are wrapped in an `<ol>` tag 
-seed                | 0                     | the seed of the random number generator used for generating lorem text
-count               | 5                     | number of paragraphs to generate
-sentenceLowerBound  | 5                     | minimum words per sentence
-sentenceUpperBound  | 15                    | maximum words per sentence
-paragraphLowerBound | 3                     | minimum sentences per paragraph
-paragraphUpperBound | 7                     | maximum sentences per paragraph
-words               | ['ad', 'dolor', ...]  | custom word dictionary
+Prop                | Default            | Description      
+------------------- |:------------------:| ------------
+mode                | "paragraphs"       | if set to `"list"`, instead of `<p>` tags wrapped in a `<div>` it renders `<li>`s wrapped in an `<ul>`
+ordered             | false              | if `mode` is set to `"list"` and this prop has a truthy value, the list items are wrapped in an `<ol>` tag 
+seed                | 0                  | the seed of the random number generator used for generating lorem text; changing this to a different natural number generates a different text
+count               | 5                  | number of paragraphs to generate
+sentenceLowerBound  | 5                  | minimum words per sentence
+sentenceUpperBound  | 15                 | maximum words per sentence
+paragraphLowerBound | 3                  | minimum sentences per paragraph
+paragraphUpperBound | 7                  | maximum sentences per paragraph
+words               | ['ad','dolor',...] | custom word dictionary
 
 The last six properties are send directly to the [lorem-ipsum][3] node module which is used internally to generate the lorem text.
+
+Other properties you pass (eg. `className`) are transfered to the wrapping tag.
 
 
 ## Example
