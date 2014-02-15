@@ -1,0 +1,37 @@
+{
+  "name": "react-lorem-component",
+  "version": "0.3.1",
+  "description": "A component for React that renders paragraph tags full of lorem ipsum text",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/natekross/react-lorem-component"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "lorem",
+    "ipsum",
+    "random"
+  ],
+  "author": {
+    "name": "Nathan Kross",
+    "email": "natekross@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/natekross/react-lorem-component/issues"
+  },
+  "homepage": "https://github.com/natekross/react-lorem-component",
+  "dependencies": {
+    "seedable-random": "0.0.1",
+    "lorem-ipsum": "~1.0.1"
+  },
+  "devDependencies": {
+    "semver": "~2.2.1",
+    "node-dev": "~2.1.6"
+  },
+  "peerDependencies": {
+    "react": "~0.8.0"
+  }
+}
