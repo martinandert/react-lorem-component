@@ -19,6 +19,9 @@
     "email": "natekross@gmail.com"
   },
   "license": "MIT",
+  "scripts": {
+    "test": "make test"
+  },
   "bugs": {
     "url": "https://github.com/natekross/react-lorem-component/issues"
   },
