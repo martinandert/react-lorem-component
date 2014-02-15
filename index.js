@@ -9,7 +9,10 @@ var Lorem = React.createClass({
   displayName: "Lorem",
 
   getDefaultProps: function() {
-    return { count: 5, seed: 0 };
+    return { 
+      mode: "paragraphs", count: 5, 
+      seed: 0, ordered: false
+    };
   },
 
   render: function() {
@@ -22,9 +25,20 @@ var Lorem = React.createClass({
     random.seed(this.props.seed);
 
     var html = loremIpsum(options);
+    var wrapper = React.DOM.div;
+
+    if (this.props.mode === "list") {
+      html = html.replace(/<p>(.*?)<\/p>/g, "<li>$1</li>");
+
+      if (this.props.ordered === true) {
+        wrapper = React.DOM.ol;
+      } else {
+        wrapper = React.DOM.ul;
+      }
+    }
 
     return this.transferPropsTo(
-      React.DOM.div({ dangerouslySetInnerHTML: { __html: html } })
+      wrapper({ dangerouslySetInnerHTML: { __html: html } })
     );
   }
 });
