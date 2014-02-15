@@ -45,7 +45,7 @@ repository and run `make install example` and point your web browser to
 
 ## Licence
 
-MIT
+Released under The MIT License.
 
 
-[1]: https://facebook.github.io/react/
+[1]: http://facebook.github.io/react/
