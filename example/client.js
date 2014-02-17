@@ -1,10 +1,7 @@
 /** @jsx React.DOM */
 
-var React       = require('react');
-var ReactMount  = require('react/lib/ReactMount');
-var Lorem       = require('../');
-
-ReactMount.allowFullPageRender = true;
+var React = require('react');
+var Lorem = require('../');
 
 var App = React.createClass({
   render: function() {
