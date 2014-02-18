@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/natekross/react-lorem-component"
+    "url": "git://github.com/martinandert/react-lorem-component"
   },
   "keywords": [
     "react",
@@ -15,17 +15,17 @@
     "random"
   ],
   "author": {
-    "name": "Nathan Kross",
-    "email": "natekross@gmail.com"
+    "name": "Martin Andert",
+    "email": "mandert@gmail.com"
   },
   "license": "MIT",
   "scripts": {
     "test": "make test"
   },
   "bugs": {
-    "url": "https://github.com/natekross/react-lorem-component/issues"
+    "url": "https://github.com/martinandert/react-lorem-component/issues"
   },
-  "homepage": "https://github.com/natekross/react-lorem-component",
+  "homepage": "https://github.com/martinandert/react-lorem-component",
   "dependencies": {
     "seedable-random": "~0.0.1",
     "lorem-ipsum": "~1.0.1"
