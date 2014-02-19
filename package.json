@@ -1,6 +1,6 @@
 {
   "name": "react-lorem-component",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "A component for React that renders paragraph or list item tags full of lorem ipsum placeholder text",
   "main": "index.js",
   "repository": {
