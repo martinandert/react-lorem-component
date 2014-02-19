@@ -1,6 +1,6 @@
 # React Lorem Component
 
-A component for [React][1] that renders paragraph or list item tags full of [lorem ipsum][2] text.
+A component for [React][1] that renders paragraph or list item tags full of [lorem ipsum][2] placeholder text.
 
 
 ## Installation
