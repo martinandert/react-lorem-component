@@ -11,7 +11,7 @@ assert.matches = function(actual, expected, message) {
 
 describe('react-lorem-component', function() {
   it('transfers props', function() {
-    var markup = render(LoremIpsum({ className: "lorem-ipsum" }));
+    var markup = render(LoremIpsum({ className: 'lorem-ipsum' }));
 
     assert.matches(markup, /^<div [^>]*?class="lorem-ipsum"/);
   });

@@ -14,17 +14,15 @@ var App = React.createClass({
         </head>
 
         <body>
-          <div>
-            <h1>Lorem Ipsum</h1>
-            <Lorem count="10" seed="42" className="ipsum" />
-          </div>
+          <h1>Lorem Ipsum</h1>
+          <Lorem count="10" seed="42" className="ipsum" />
         </body>
       </html>
     );
   }
 });
 
-if (typeof window !== "undefined") {
+if (typeof window !== 'undefined') {
   window.onload = function() {
     React.renderComponent(<App />, document);
   }

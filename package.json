@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/martinandert/react-lorem-component"
+    "url": "https://github.com/martinandert/react-lorem-component.git"
   },
   "keywords": [
     "react",
