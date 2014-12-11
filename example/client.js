@@ -1,4 +1,4 @@
-/** @jsx React.DOM */
+"use strict";
 
 var React = require('react');
 var Lorem = require('../');
@@ -8,7 +8,7 @@ var App = React.createClass({
     return { seed: 42 };
   },
 
-  onButtonClick: function(e) {
+  handleClick: function(e) {
     this.setState({ seed: Math.floor(Math.random() * 10000) });
   },
 
@@ -24,7 +24,7 @@ var App = React.createClass({
 
         <body>
           <h1>Lorem Ipsum</h1>
-          <p><button onClick={this.onButtonClick}>Randomize</button></p>
+          <p><button onClick={this.handleClick}>Randomize</button></p>
 
           <Lorem count="10" seed={this.state.seed} className="ipsum" />
         </body>
@@ -34,8 +34,10 @@ var App = React.createClass({
 });
 
 if (typeof window !== 'undefined') {
+  window.React = React;
+
   window.onload = function() {
-    React.renderComponent(<App />, document);
+    React.render(<App />, document);
   }
 }
 

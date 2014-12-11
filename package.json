@@ -19,29 +19,26 @@
     "email": "mandert@gmail.com"
   },
   "license": "MIT",
-  "scripts": {
-    "test": "make test"
-  },
   "bugs": {
     "url": "https://github.com/martinandert/react-lorem-component/issues"
   },
   "homepage": "https://github.com/martinandert/react-lorem-component",
   "dependencies": {
-    "seedable-random": "~0.0.1",
-    "lorem-ipsum": "~1.0.1"
+    "lorem-ipsum": "^1.0.1",
+    "object-assign": "^2.0.0",
+    "seedable-random": "0.0.1"
   },
   "peerDependencies": {
-    "react": ">= 0.11.1"
+    "react": "^0.12.1"
   },
   "devDependencies": {
-    "semver": "~3.0.1",
-    "node-dev": "~2.3.0",
-    "jshint": "~2.5.2",
-    "mocha": "~1.21.3",
-    "connect-browserify": "~3.2.0",
-    "express": "~4.7.2",
-    "node-jsx": "~0.11.0",
-    "reactify": "~0.14.0",
-    "react": "~0.11.1"
+    "connect-browserify": "^3.2.1",
+    "express": "^4.10.5",
+    "jshint": "^2.5.10",
+    "mocha": "^2.0.1",
+    "node-dev": "^2.6.0",
+    "node-jsx": "^0.12.4",
+    "react": "^0.12.1",
+    "reactify": "^0.17.1"
   }
 }

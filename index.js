@@ -1,9 +1,9 @@
 'use strict';
 
 var React       = require('react');
-var merge       = require('react/lib/merge');
 var loremIpsum  = require('lorem-ipsum');
 var random      = require('seedable-random');
+var extend      = require('object-assign');
 
 var Lorem = React.createClass({
   displayName: 'Lorem',
@@ -16,30 +16,30 @@ var Lorem = React.createClass({
   },
 
   render: function() {
-    var options = merge(this.props, {
+    var props = extend({}, this.props, {
       units: 'paragraphs',
       format: 'html',
       random: random
     });
 
-    random.seed(this.props.seed);
+    random.seed(props.seed);
 
-    var html = loremIpsum(options);
+    var html = loremIpsum(props);
     var wrapper = React.DOM.div;
 
-    if (this.props.mode === 'list') {
+    if (props.mode === 'list') {
       html = html.replace(/<p>(.*?)<\/p>/g, '<li>$1</li>');
 
-      if (this.props.ordered) {
+      if (props.ordered) {
         wrapper = React.DOM.ol;
       } else {
         wrapper = React.DOM.ul;
       }
     }
 
-    return this.transferPropsTo(
-      wrapper({ dangerouslySetInnerHTML: { __html: html } })
-    );
+    props.dangerouslySetInnerHTML = { __html: html };
+
+    return wrapper(props);
   }
 });
 
