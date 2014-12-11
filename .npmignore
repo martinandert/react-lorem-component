@@ -1,0 +1,6 @@
+example
+.jshintrc
+.npmignore
+LICENSE
+Makefile
+spec.js
