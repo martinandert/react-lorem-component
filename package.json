@@ -29,7 +29,7 @@
     "seedable-random": "0.0.1"
   },
   "peerDependencies": {
-    "react": "^0.12.1"
+    "react": ">=0.12.1 && <0.14.*"
   },
   "devDependencies": {
     "connect-browserify": "^3.2.1",
@@ -38,7 +38,7 @@
     "mocha": "^2.0.1",
     "node-dev": "^2.6.0",
     "node-jsx": "^0.12.4",
-    "react": "^0.12.1",
+    "react": ">=0.12.1 && <0.14.*",
     "reactify": "^0.17.1"
   }
 }
