@@ -1,7 +1,8 @@
 "use strict";
 
-var React = require('react');
-var Lorem = require('../');
+var React     = require('react');
+var ReactDOM  = require('react-dom');
+var Lorem     = require('../');
 
 var App = React.createClass({
   getInitialState: function() {
@@ -37,7 +38,7 @@ if (typeof window !== 'undefined') {
   window.React = React;
 
   window.onload = function() {
-    React.render(<App />, document);
+    ReactDOM.render(<App />, document);
   }
 }
 

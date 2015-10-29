@@ -10,7 +10,7 @@ install:
 	npm install
 
 example::
-	@$(BIN)/node-dev --no-deps example/server.js
+	@$(BIN)/node-dev example/server.js
 
 release-patch: test
 	@$(call release,patch)

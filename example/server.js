@@ -4,6 +4,7 @@ var express     = require('express');
 var browserify  = require('connect-browserify');
 var reactify    = require('reactify');
 var React       = require('react');
+var ReactDOM    = require('react-dom/server');
 
 require('node-jsx').install();
 
@@ -16,7 +17,7 @@ express()
     transforms: [reactify]
   }))
   .get('/', function(req, res, next) {
-    res.send(React.renderToString(App()));
+    res.send(ReactDOM.renderToString(App()));
   })
   .listen(3000, function() {
     console.log('Point your browser to http://localhost:3000');

@@ -1,7 +1,8 @@
-var assert  = require('assert');
-var React   = require('react');
-var Lorem   = React.createFactory(require('./'));
-var render  = React.renderToString;
+var assert    = require('assert');
+var React     = require('react');
+var ReactDOM  = require('react-dom/server');
+var Lorem     = React.createFactory(require('./'));
+var render    = ReactDOM.renderToString;
 
 // output React console warnings as failed assertions
 console.warn = function(message) {
@@ -34,7 +35,7 @@ describe('react-lorem-component', function() {
 
       var markup = render(component);
 
-      assert.matches(markup, /^<div [^>]+><p>Foo. Foo.<\/p><p>Foo. Foo.<\/p><\/div>$/);
+      assert.matches(markup, /^<div [^>]+><p>Foo. Foo.<\/p>\s*<p>Foo. Foo.<\/p><\/div>$/);
     });
   });
 
@@ -43,7 +44,7 @@ describe('react-lorem-component', function() {
       var component = Lorem({ count: 2, mode: 'list' });
       var markup = render(component);
 
-      assert.matches(markup, /^<ul [^>]+><li>.+<\/li><\/ul>$/);
+      assert.matches(markup, /^<ul [^>]+><li>/);
     });
 
     describe('and with `ordered` property set to `true`', function() {
@@ -51,7 +52,7 @@ describe('react-lorem-component', function() {
         var component = Lorem({ count: 2, mode: 'list', ordered: true });
         var markup = render(component);
 
-        assert.matches(markup, /^<ol [^>]+><li>.+<\/li><\/ol>$/);
+        assert.matches(markup, /^<ol [^>]+><li>/);
       });
     });
   });
