@@ -4,8 +4,8 @@ var ReactDOM  = require('react-dom/server');
 var Lorem     = React.createFactory(require('./'));
 var render    = ReactDOM.renderToString;
 
-// output React console warnings as failed assertions
-console.warn = function(message) {
+// hack: output React console warnings as failed assertions
+console.error = function(message) {
   assert(false, message);
 };
 

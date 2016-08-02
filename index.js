@@ -10,14 +10,16 @@ var Lorem = React.createClass({
 
   getDefaultProps: function() {
     return {
-      mode: 'paragraphs', count: 5,
-      seed: 0, ordered: false
+      mode:     'paragraphs',
+      count:    5,
+      seed:     0,
+      ordered:  false
     };
   },
 
   render: function() {
     var props = extend({}, this.props, {
-      units: 'paragraphs',
+      units:  'paragraphs',
       format: 'html',
       random: random
     });
@@ -38,6 +40,25 @@ var Lorem = React.createClass({
     }
 
     props.dangerouslySetInnerHTML = { __html: html };
+
+    // own props
+    delete props.mode;
+    delete props.ordered;
+    delete props.random;
+
+    // props passed to seedable-random
+    delete props.seed;
+
+    // props passed to lorem-ipsum
+    delete props.count;
+    delete props.units;
+    delete props.sentenceLowerBound;
+    delete props.sentenceUpperBound;
+    delete props.paragraphLowerBound;
+    delete props.paragraphUpperBound;
+    delete props.format;
+    delete props.words;
+    delete props.suffix;
 
     return wrapper(props);
   }
