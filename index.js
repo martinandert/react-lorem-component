@@ -11,6 +11,7 @@ var Lorem = React.createClass({
   getDefaultProps: function() {
     return {
       mode:     'paragraphs',
+      format:   'html',
       count:    5,
       seed:     0,
       ordered:  false
@@ -20,7 +21,6 @@ var Lorem = React.createClass({
   render: function() {
     var props = extend({}, this.props, {
       units:  'paragraphs',
-      format: 'html',
       random: random
     });
 
