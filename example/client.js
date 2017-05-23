@@ -1,10 +1,11 @@
 "use strict";
 
-var React     = require('react');
-var ReactDOM  = require('react-dom');
-var Lorem     = require('../');
+var React = require('react');
+var ReactDOM = require('react-dom');
+var createReactClass = require('create-react-class');
+var Lorem = require('../');
 
-var App = React.createClass({
+var App = createReactClass({
   getInitialState: function() {
     return { seed: 42 };
   },

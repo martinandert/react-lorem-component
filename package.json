@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "connect-browserify": "^4.0.0",
+    "create-react-class": "^15.5.3",
     "express": "^4.10.5",
     "jshint": "^2.5.10",
     "mocha": "^3.0.0",

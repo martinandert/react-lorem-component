@@ -1,11 +1,12 @@
 'use strict';
 
-var React       = require('react');
-var loremIpsum  = require('lorem-ipsum');
-var random      = require('seedable-random');
-var extend      = require('object-assign');
+var React = require('react');
+var createReactClass = require('create-react-class');
+var loremIpsum = require('lorem-ipsum');
+var random = require('seedable-random');
+var extend = require('object-assign');
 
-var Lorem = React.createClass({
+var Lorem = createReactClass({
   displayName: 'Lorem',
 
   getDefaultProps: function() {
