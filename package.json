@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/martinandert/react-lorem-component",
   "dependencies": {
+    "create-react-class": "^15.5.3",
     "lorem-ipsum": "^1.0.3",
     "object-assign": "^4.1.0",
     "seedable-random": "0.0.1"
@@ -33,7 +34,6 @@
   },
   "devDependencies": {
     "connect-browserify": "^4.0.0",
-    "create-react-class": "^15.5.3",
     "express": "^4.10.5",
     "jshint": "^2.5.10",
     "mocha": "^3.0.0",
