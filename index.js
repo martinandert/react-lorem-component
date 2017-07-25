@@ -28,16 +28,18 @@ var Lorem = createReactClass({
     random.seed(props.seed);
 
     var html = loremIpsum(props);
-    var wrapper = React.DOM.div;
+    var wrapper;
 
     if (props.mode === 'list') {
       html = html.replace(/<p>(.*?)<\/p>/g, '<li>$1</li>');
 
       if (props.ordered) {
-        wrapper = React.DOM.ol;
+        wrapper = React.createFactory('ol');
       } else {
-        wrapper = React.DOM.ul;
+        wrapper = React.createFactory('ul');
       }
+    } else {
+      wrapper = React.createFactory('div');
     }
 
     props.dangerouslySetInnerHTML = { __html: html };
