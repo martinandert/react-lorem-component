@@ -39,7 +39,7 @@ if (typeof window !== 'undefined') {
   window.React = React;
 
   window.onload = function() {
-    ReactDOM.render(<App />, document);
+    ReactDOM.hydrate(<App />, document);
   }
 }
 
